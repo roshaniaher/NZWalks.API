@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NZWalks.API.CustomActionFolder;
 using NZWalks.API.Data;
 using NZWalks.API.Models.Domain;
 using NZWalks.API.Models.DTO;
@@ -71,24 +72,20 @@ namespace NZWalks.API.Controllers
 
         //Create new region
         [HttpPost]
+        [ValidateModelAttribute]
         public async Task<IActionResult> Create([FromBody] AddRegionRequestDto AddregionDto)
         {
-            if (ModelState.IsValid)
-            {
+            
+            //Map or Convert DTO to Domain model
+            var regionDomain = mapper.Map<Region>(AddregionDto);
 
-                //Map or Convert DTO to Domain model
-                var regionDomain = mapper.Map<Region>(AddregionDto);
+            //Use domain model to create region
+            regionDomain = await regionRepository.CreateAsync(regionDomain);
 
-                //Use domain model to create region
-                regionDomain = await regionRepository.CreateAsync(regionDomain);
-
-                //convert Domain model to dto
-                var regionDto = mapper.Map<RegionDto>(regionDomain);
-                return CreatedAtAction(nameof(GetById), new { id = regionDto.Id }, regionDto);
-            }
-            else
-                return BadRequest(ModelState);
-        
+            //convert Domain model to dto
+            var regionDto = mapper.Map<RegionDto>(regionDomain);
+            return CreatedAtAction(nameof(GetById), new { id = regionDto.Id }, regionDto);
+            
         }
 
         //update region
