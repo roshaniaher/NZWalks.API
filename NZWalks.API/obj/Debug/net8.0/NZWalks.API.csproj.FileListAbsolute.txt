@@ -172,3 +172,10 @@ F:\Switch\ASP.NET\NZWalks\NZWalks.API\bin\Debug\net8.0\runtimes\browser\lib\net8
 F:\Switch\ASP.NET\NZWalks\NZWalks.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 F:\Switch\ASP.NET\NZWalks\NZWalks.API\bin\Debug\net8.0\AutoMapper.dll
 F:\Switch\ASP.NET\NZWalks\NZWalks.API\obj\Debug\net8.0\NZWalks.API.sourcelink.json
+F:\Switch\ASP.NET\NZWalks\NZWalks.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Switch\ASP.NET\NZWalks\NZWalks.API\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+F:\Switch\ASP.NET\NZWalks\NZWalks.API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\Switch\ASP.NET\NZWalks\NZWalks.API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\Switch\ASP.NET\NZWalks\NZWalks.API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\Switch\ASP.NET\NZWalks\NZWalks.API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+F:\Switch\ASP.NET\NZWalks\NZWalks.API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
